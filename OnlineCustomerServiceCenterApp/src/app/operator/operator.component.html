@@ -1,0 +1,62 @@
+<p>
+  OPERATOR
+</p>
+
+<tr>
+  <td><a *ngIf="adminFlag" routerLink="Menu/:name">send Password to mail</a></td>
+</tr>
+
+<head>
+  <style>
+    div{
+    margin:auto;
+  }
+  form{
+    margin:auto;
+  }
+
+  </style>
+</head>
+<div class ="container">
+<form class ="form-horizontal">
+  <div class="row">
+    <!--<div class="col-xs-6">
+
+    </div>-->
+    <div class="col-xs-6">
+    <div class="form-group">
+      <label for="exampleFormControlInput1" class="form-label">Enter operator Id </label>
+  <input class="form-control" type="text" name ="operator.operatorId" placeholder="operator id" [(ngModel)]="operator.operatorId"><br>
+
+  <label for="exampleFormControlInput1" class="form-label">Enter First Name</label>
+  <input class="form-control" type="text" name ="operator.firstName" placeholder="first name" [(ngModel)]="operator.firstName"><br>
+
+  <label for="exampleFormControlInput1" class="form-label">Enter Last Name </label>
+  <input class="form-control" type="text" name ="operator.lastName" placeholder="last name" [(ngModel)]="operator.lastName"><br>
+
+  <label for="exampleFormControlInput1" class="form-label">Enter Email</label>
+  <input class="form-control" class="form-control" type="text" name ="operator.email" placeholder="email" [(ngModel)]="operator. email"><br>
+
+  <label for="exampleFormControlInput1" class="form-label">Enter Mobile</label>
+  <input class="form-control" type="text" name ="operator.mobile" placeholder="mobile" [(ngModel)]="operator.mobile"><br>
+
+  <label for="exampleFormControlInput1" class="form-label">Enter City</label>
+  <input class="form-control" type="text" name ="operator.city" placeholder="city" [(ngModel)]="operator.city"><br>
+
+  <label for="exampleFormControlInput1" class="form-label">Enter Department Id</label>
+  <input class="form-control" type="text" name ="operator.department.departmentId" placeholder="department id" [(ngModel)]="operator.department.departmentId"><br>
+
+  <label for="exampleFormControlInput1" class="form-label">Enter User Name</label>
+  <input class="form-control" type="text" name ="operator.department.login.username" placeholder="user Name" [(ngModel)]="operator.department.login.username"><br>
+
+  <label for="exampleFormControlInput1" class="form-label">Enter password</label>
+  <input class="form-control" type="password" name ="operator.department.login.password" placeholder="password" [(ngModel)]="operator.department.login.password"><br>
+
+  <button type="submit" class="btn btn-primary mb-3" (click)="addOperator()">Submit</button>
+    </div>
+    </div>
+  </div>
+
+  
+</form>
+</div>

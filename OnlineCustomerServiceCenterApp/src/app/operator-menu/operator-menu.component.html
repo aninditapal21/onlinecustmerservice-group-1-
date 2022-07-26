@@ -1,0 +1,46 @@
+<p>
+  welcome Operator
+</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">OnlineCustomerServiceCenter</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="Menu/:{{name}}">Admin Service <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a *ngIf="adminFlag" class="nav-link" routerLink="/operator">Operator Service <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <div class="my-2 my-lg-0">
+      <a class="btn btn-primary" href="/login" role="button"  routerLink="/logout">Log Out</a>
+    </div>
+  </div>
+</nav>
+<tbody>
+  <tr>
+    <td><a routerLink="/addCustomerIssue">Add Customer Issue</a></td>
+  </tr>
+  <tr>
+    <td><a routerLink="/viewCustomerIssue">View Customer Issue</a></td>
+  </tr>
+  <tr>
+    <td><a routerLink="/findCustomer">Find Customer</a></td>
+  </tr>
+  <tr>
+    <td><a routerLink="/viewCustomer">View All Customer</a></td>
+  </tr>
+  <tr>
+    <td><a routerLink="/sendModifyMail">send Modification Mail to Customer</a></td>
+  </tr>
+  <tr>
+    <td><a routerLink="/sendIntimationMail">send Intimation Mail to Customer</a></td>
+  </tr>
+</tbody>

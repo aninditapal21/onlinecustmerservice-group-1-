@@ -1,0 +1,30 @@
+<!-- <p>
+  intimation-mail works!
+</p>
+Enter customer Id:<input type="text" [(ngModel)]="customerId" name="customerId"><br><br>
+<button type="button" (click)="sendingIntimationMail()">Send Mail</button> -->
+
+
+
+<head>
+  <style>
+    div{
+    margin:auto;
+  }
+  </style>
+</head>
+
+<div >
+  <form class="row g-3" >
+    <div class="col-auto">
+      <input type="text" readonly class="form-control-plaintext" id="" value="Enter Customer Id">
+    </div>
+    <div class="col-auto">
+     <input type="text" class="form-control" placeholder="custId" [(ngModel)]="customerId" name="customerId" >
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-3" (click)="sendingIntimationMail()">Send Mail</button>
+    </div>
+  </form>
+  </div>
+

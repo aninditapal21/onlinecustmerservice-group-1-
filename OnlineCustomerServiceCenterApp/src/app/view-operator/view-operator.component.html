@@ -1,0 +1,73 @@
+<!-- <p>
+  view-operator works!
+</p>
+<thead>
+  <th>OERATOR ID</th>
+  <th>OERATOR FIRSTNAME</th>
+  <th>OERATOR LASTNAME</th>
+  <th>OERATOR EMAIL</th>
+  <th>OERATOR MOBILE</th>
+  <th>OERATOR CITY</th>
+</thead>
+<tbody>
+  <tr *ngFor="let opt of operators">
+  <td>{{opt.operatorId}}</td>
+  <td>{{opt.firstName}}</td>
+  <td>{{opt.lastName}}</td>
+  <td>{{opt.email}}</td>
+  <td>{{opt.mobile}}</td>
+  <td>{{opt.city}}</td>
+  <td><button type="button"(click)="deleteOpt(opt.department.departmentId)">DELETE</button></td>
+  <td><button type="button"(click)="editOpt(opt.department.departmentId)">EDIT</button></td>
+</tr>
+</tbody> -->
+
+<p>
+  view-all-operator /Delete /Edit
+</p>
+
+<table class="table">
+  <thead>
+    <tr class="table-secondary">
+      <th scope="col">operator Id</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">City</th>
+      <!-- <th scope="col">department Id</th> -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let opt of operators"  class="table-light">
+      <td>{{opt.operatorId}}</td>
+      <td>{{opt.firstName}}</td>
+      <td>{{opt.lastName}}</td>
+      <td>{{opt.email}}</td>
+      <td>{{opt.mobile}}</td>
+      <td>{{opt.city}}</td>
+      <!-- <td>{{opt.department.departmentId}}</td> -->
+      <td>
+        <button class="btn btn-outline-primary me-2 mb-1" (click)="editOpt(opt.department.departmentId)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+          </svg>
+        </button>
+      </td>
+      <td>
+        <button class="btn btn-outline-danger me-2 mb-1" (click)="deleteOpt(opt.department.departmentId)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+            <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+          </svg>
+        </button>
+      </td>
+      <!-- <td><button (click)="deleteOperator(opt.department.departmentId)" class="table-danger">DELETE</button></td>
+      <td><button (click)="editOperator(opt.department.departmentId)" class="table-info">EDIT</button></td>
+       -->
+    </tr>
+    
+  </tbody>
+</table>
+
+

@@ -1,0 +1,71 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+
+<form>
+  <label></label>
+         <p>
+            <label> <b>Customer Id: </b></label>
+            <input type="text" [(ngModel)]="customer.customerId" name="customer.customerId" placeholder="Enter customer Id">
+         </p>
+         <p>
+            <label> <b>FirstName: </b></label>
+            <input type="text" [(ngModel)]="customer.firstName" name="customer.firstName"placeholder="Enter fisrt name">
+        </p>
+        <p>
+            <label> <b>LastName: </b></label>
+            <input type="text" [(ngModel)]="customer.lastName" name="customer.lastName" placeholder="Enter last name" >
+        </p>
+        
+        <p>
+            <label> <b>Email: </b></label>
+            <input type="email" [(ngModel)]="customer.email" name="customer.email" placeholder="Enter email Id">
+        </p>
+        <p>
+            <label> <b>Mobile: </b></label>
+            <input type="text" [(ngModel)]="customer.mobile" name="customer.mobile" placeholder="Enter mobile number">
+        </p>
+        <p>
+            <label> <b>City: </b></label>
+            <input type="text" [(ngModel)]="customer.city" name="customer.city" placeholder="Enter city">
+        </p>
+        <p>
+            <label> <b>UserName: </b></label>
+            <input type="text" [(ngModel)]="customer.login.username" name="customer.login.username" placeholder="Enter username">
+        </p>
+        <p>
+            <label> <b>PassWord: </b></label>
+            <input type="text" [(ngModel)]="customer.login.password" name="customer.login.password" placeholder="Enter password">
+        </p>
+        <p>
+            <label> <b>UserType: </b></label>
+            <select [(ngModel)]="customer.login.type" name="customer.login.type" align="center">
+            <option value="CUSTOMER">CUSTOMER</option></select>
+        </p>
+        <p>
+            <label> <b>IsActive: </b></label>
+            <select [(ngModel)]="customer.login.isActive" name="customer.login.isActive" align="center">
+            <option value="TRUE">TRUE</option></select>
+        </p>
+  <button type="button"  (click)="addCustomer()">Register Customer </button>
+  <style>
+  input,
+input::-webkit-input-placeholder {
+    font-size: 15px;
+    
+}
+
+      label{
+          
+            display: inline-block;
+            text-align: right;
+            width: 150px;
+            font-size: 115%;
+            
+           
+        }
+         input{
+            font-size: inherit;
+            font-size: 150%;
+        }
+    </style>
+  
+</form>

@@ -1,0 +1,36 @@
+<p>
+  update-operator
+</p>
+<head>
+  <style>
+    div{
+    margin:auto;
+  }
+  form{
+    margin:auto;
+  }
+  </style>
+  </head>
+<div>
+  <form>
+<div class="row">
+  <div class ="col-xs-6">
+    <div class="form-group">
+      <div class="mb-3">
+        <label for="deptId" class="form-label">Enter deptId:</label>
+        <input type="text" class="form-control" name="deptId" [(ngModel)]="deptId">
+      </div>
+      <div class="mb-3">
+        <label for="operatorId" class="form-label">Enter Operator Id:</label>
+        <input type="text" class="form-control" name="operatorId" [(ngModel)]="operatorId">
+      </div>
+      <div class="mb-3">
+        <label for="city" class="form-label">City:</label>
+        <input type="text" class="form-control" name="city" [(ngModel)]="city">
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="updateOperator()">Update</button>
+     </div>
+    </div>
+</div>
+</form>
+</div>

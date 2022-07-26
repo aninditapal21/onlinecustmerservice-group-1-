@@ -1,0 +1,21 @@
+<p>
+  Department Table
+</p>
+<table class="table table-hover">
+<thead>
+  <tr>
+    <th>NO.</th>
+    <th scope="col">DEPARTMENT ID</th>
+    <th scope="col">DEPARTMENT NAME</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let dept of departments;let num=index">
+    <td>{{num+1}}</td>
+    <td>{{dept.departmentId}}</td>
+    <td>{{dept.departmentName}}</td>
+    <td><button type="button"(click)="editDept(dept.departmentId)" class="btn btn-outline-secondary">EDIT</button></td>
+    <td><button type="button"(click)="deleteDept(dept.departmentId)" class="btn btn-danger">DELETE</button></td>
+  </tr>
+</tbody>
+</table>

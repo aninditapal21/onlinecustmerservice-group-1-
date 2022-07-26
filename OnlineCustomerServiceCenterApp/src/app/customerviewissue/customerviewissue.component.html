@@ -1,0 +1,25 @@
+<h3>Issue List</h3>
+  
+
+<table border="1" align="center" width="80%">
+<thead>
+  <tr>
+  <th>Issue Id</th>
+  <th>Description</th>
+  <th>Issue Status</th>
+  <th>Issue Type</th>
+  <th>Reopen Issue</th>
+ </tr>
+</thead>
+<tbody> 
+  <tr *ngFor="let issues of issue">
+  <td>{{issues.issueId}}</td>
+  <td>{{issues.description}}</td>
+  <td>{{issues.issueStatus}}</td>
+  <td>{{issues.issueType}}</td>
+   <td><button type="button" (click)="reopenissue(issues.call.customer.customerId)">ReopenIssue</button></td>
+
+</tr>
+
+</tbody>
+</table>

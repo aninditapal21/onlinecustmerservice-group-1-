@@ -1,0 +1,83 @@
+<html>
+  <p>
+    Department Form
+  </p>
+  <body>
+    <div class="container">
+      <form>
+        <div class="form-group">
+          <label for="DeptId">Enter Department Id:</label>
+          <input type="text" class="form-control" id="DeptName" [(ngModel)]="department.departmentId" name="department.departmentId" placeholder="Enter Department Id">
+        </div>
+        <div class="form-group">
+          <label for="DeptName">Enter Department Name:</label>
+          <input type="text"  class="form-control" id="DeptName"[(ngModel)]="department.departmentName" name="department.departmentName" placeholder="Enter Department Name">
+        </div>
+        <div class="form-group">
+          <label for="userName">Enter Login Id:</label>
+          <input type="text" class="form-control" id="userName" [(ngModel)]="department.login.username" name="department.login.username" placeholder="Enter Login Id">
+        </div>
+        <div class="form-group">
+          <label for="password">Enter Login Password:</label>
+          <input type="password" class="form-control" id="password" [(ngModel)]="department.login.password" name="department.login.password" placeholder="Enter password">
+        </div>
+        <div class="form-group">
+          <label for="type">Enter Login Type:</label>
+          <select name="department.login.type" class="form-control" id="type" [(ngModel)]="department.login.type" >
+            <option value="ADMIN">ADMIN</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="active">Enter Login Active</label>
+          <select name="department.login.isActive" class="form-control" id="active" [(ngModel)]="department.login.isActive">
+            <option value="true">True</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn-primary" (click)="addDepartment()"> Add Department</button>
+      </form>
+    </div>
+  </body>
+</html>
+<!-- Enter Department Id:<input type="text" [(ngModel)]="department.departmentId" name="department.departmentId"><br><br>
+Enter Department Name:<input type="text" [(ngModel)]="department.departmentName" name="department.departmentName"><br><br>
+Enter Login Id:<input type="text" [(ngModel)]="department.login.username" name="department.login.username"><br><br>
+Enter Login Password:<input type="password" [(ngModel)]="department.login.password" name="department.login.password"><br><br>
+Enter Login Type:<select name="department.login.type" [(ngModel)]="department.login.type" >
+  <option value="ADMIN">ADMIN</option>
+</select><br><br>
+Enter Login Active<select name="department.login.isActive" [(ngModel)]="department.login.isActive">
+  <option value="true">True</option>
+  </select><br><br>
+<button type="button" (click)="addDepartment()"> Add Department</button> -->
+
+
+
+<!--
+  <html>
+    <body>
+        <div class="container">
+           <form>
+                <div class="form-group">
+                  <label for="userName">Enter UserName:</label>
+                  <input type="text" class="form-control" [(ngModel)]="userName" id="userName" name="userName"placeholder="Enter username">
+                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> 
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="password">Enter Password:</label>
+                  <input type="password" class="form-control" [(ngModel)]="password" id="password" name="password" placeholder="Password">
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> 
+                </div>
+                <div class="form-group ">
+                    <label for="type">Enter User type:</label>
+                    <select name="type" [(ngModel)]="type" class="form-control">
+                        <option selected>Choose...</option>
+                        <option value="ADMIN">ADMIN</option>
+                        <option value="CUSTOMER">CUSTOMER</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="handleLogin()">Login</button>
+              </form>
+        </div>
+    </body>
+</html> -->

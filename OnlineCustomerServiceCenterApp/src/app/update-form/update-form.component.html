@@ -1,0 +1,54 @@
+<html>
+  <p>
+   Updated Department Form
+  </p>
+<body>
+  <div class="container">
+    <form>
+      <div class="form-group">
+        <label for="DeptId">Enter Department Id:</label>
+        <input type="text" class="form-control" id="DeptName" name="departmentId" [(ngModel)]="departmentId">
+      </div>
+      <div class="form-group">
+        <label for="DeptName">Enter Department Name:</label>
+        <input type="text" class="form-control" id="DeptName" name="deptName" [(ngModel)]="deptName">
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="updatedDepartment()">Updated Department</button>
+    </form>
+  </div>
+</body>
+</html>
+
+
+
+
+
+<!-- <p>
+  update-form works!
+</p>
+<form>
+  Enter Department Id:<input type="text" name="departmentId" [(ngModel)]="departmentId"><br><br>
+  Enter Department Name:<input type="text" name="deptName" [(ngModel)]="deptName"><br><br>
+  <button type="submit" (click)="updatedDepartment()">Updated Department</button>
+</form> -->
+<!-- <html>
+  <p>
+    Department Form
+  </p>
+<body>
+  <div class="container">
+    <form>
+      <div class="form-group">
+        <label for="DeptId">Enter Department Id:</label>
+        <input type="text" class="form-control" id="DeptName" [(ngModel)]="department.departmentId" name="department.departmentId" placeholder="Enter Department Id">
+      </div>
+      <div class="form-group">
+        <label for="DeptName">Enter Department Name:</label>
+        <input type="text"  class="form-control" id="DeptName"[(ngModel)]="department.departmentName" name="department.departmentName" placeholder="Enter Department Name">
+      </div>
+      <button type="button" class="btn btn-primary" (click)="addDepartment()"> Add Department</button>
+    </form>
+  </div>
+</body>
+</html> -->
+

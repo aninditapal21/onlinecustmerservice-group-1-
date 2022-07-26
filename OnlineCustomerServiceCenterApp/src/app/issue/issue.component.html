@@ -1,0 +1,175 @@
+<!-- <p>
+  issue works!
+</p>
+<h1>Issue Details</h1>
+ Enter issueId: <input type="text" name="issue.issueId" [(ngModel)]="issue.issueId"><br>
+  Enter issueType: <input type="text" name="issue.issueType" [(ngModel)]="issue.issueType"><br>
+  Enter description: <input type="text" name="issue.description" [(ngModel)]="issue.description"><br>
+  Enter issueStatus: <input type="text" name="issue.issueStatus" [(ngModel)]="issue.issueStatus"><br>
+  <h3>Call Details</h3>
+  Enter call Id:<input type="text" name="issue.call.callId" [(ngModel)]="issue.call.callId"><br><br>
+  Enter call Date:<input type="date" name="issue.call.callDate" [ngModel]="issue.call.callDate | date |date:'dd/MM/yyyy' " (ngModelChange)="issue.call.callDate=$event"><br><br>
+  Enter call Duration:<input type="text" name="issue.call.callDuration" [(ngModel)]="issue.call.callDuration"><br><br>
+  Enter call Phoner Number:<input type="text" name="issue.call.phoneNumber" [(ngModel)]="issue.call.phoneNumber"><br><br>
+  <h3>customer Details</h3>
+  Enter Customer Id:<input type="text" name="issue.call.customer.customerId" [(ngModel)]="issue.call.customer.customerId"><br><br>
+  Enter Customer email:<input type="email" [(ngModel)]="issue.call.customer.email" name="issue.call.customer.email"><br>
+  Enter Customer mobile:<input type="text" [(ngModel)]="issue.call.customer.mobile" name="issue.call.customer.mobile"><br>
+  Enter UserName:<input type="text" [(ngModel)]="issue.call.customer.login.username" name="issue.call.customer.login.username"><br>
+  <h3>Operator Details</h3>
+  Enter Operator Id:<input type="text" name="issue.call.operator.operatorId" [(ngModel)]="issue.call.operator.operatorId"><br><br>
+  Enter Operator Email:<input type="text" name="issue.call.operator.email" [(ngModel)]="issue.call.operator.email"><br><br>
+  Enter Operatoe Mobile:<input type="text" name="issue.call.operator.mobile" [(ngModel)]="issue.call.operator.mobile"><br><br>
+  <h3>Department details</h3>
+  Enter Department Id:<input type="text" name="issue.call.operator.department.departmentId" [(ngModel)]="issue.call.operator.department.departmentId">
+  Enter Department LginId:<input type="text" name="issue.call.operator.department.login.username" [(ngModel)]="issue.call.operator.department.login.username">
+  <h3>Solutin Details</h3>
+  Enter Solution Id:<input type="text" name="issue.solution.solutionId" [(ngModel)]="issue.solution.solutionId"><br><br>
+  Enter Solution Description:<input type="text" name="issue.solution.solutionDescription" [(ngModel)]="issue.solution.solutionDescription"><br><br>
+  Enter Solution Date:<input type="date" name="issue.solution.solutionDate" [ngModel]="issue.solution.solutionDate | date |date:'dd/MM/yyyy' " (ngModelChange)="issue.solution.solutionDate=$event"><br><br>
+  Enter Operator Id:<input type="text" name="issue.solution.operator.operatorId" [(ngModel)]="issue.solution.operator.operatorId"><br><br>
+  Enter Operator Email:<input type="text" name="issue.solution.operator.email" [(ngModel)]="issue.solution.operator.email"><br><br>
+  Enter Operatoe Mobile:<input type="text" name="issue.solution.operator.mobile" [(ngModel)]="issue.solution.operator.mobile"><br><br>
+  Enter Department Id:<input type="text" name="issue.solution.operator.department.departmentId" [(ngModel)]="issue.solution.operator.department.departmentId">
+  Enter Department LoginId:<input type="text" name="issue.solution.operator.department.login.username" [(ngModel)]="issue.solution.operator.department.login.username">
+
+ <button type="button" (click)="addCustomerIssue()">Add Customer Issue</button> -->
+
+
+
+
+
+ <h3>Issue Details</h3>
+<div class="form-group row">
+<label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Enter issueId:</label>
+<div class="col-sm-8">
+ <input type="text" name="issue.issueId" class="form-control form-control-sm" [(ngModel)]="issue.issueId">
+</div>
+</div>
+<div class="form-group row">
+<label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Enter issueType:</label>
+<div class="col-sm-8">
+   <input type="text" name="issue.issueType" class="form-control form-control-sm" [(ngModel)]="issue.issueType">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Enter description:</label>
+  <div class="col-sm-8">
+   <input type="text" name="issue.description" class="form-control form-control-sm" [(ngModel)]="issue.description">
+  </div>
+</div>
+  <div class="form-group row">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm"> Enter issueStatus:</label>
+  <div class="col-sm-8">
+  <input type="text" name="issue.issueStatus" class="form-control form-control-sm" [(ngModel)]="issue.issueStatus">
+</div>
+</div>
+  
+  <h3>Call Details</h3>
+  <div class="form-group row">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Enter call Id:</label>
+  <div class="col-sm-8">
+  <input type="text" name="issue.call.callId" class="form-control form-control-sm" [(ngModel)]="issue.call.callId">
+</div>
+</div>
+<div class="form-group row">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Enter call Date:</label>
+  <div class="col-sm-8">
+  <input type="date" name="issue.call.callDate" class="form-control form-control-sm" [ngModel]="issue.call.callDate | date |date:'dd/MM/yyyy' " (ngModelChange)="issue.call.callDate=$event"><br><br>
+</div>
+</div>
+<div class="form-group row">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm"> Enter call Duration:</label>
+  <div class="col-sm-8">
+ <input type="text" name="issue.call.callDuration" class="form-control form-control-sm" [(ngModel)]="issue.call.callDuration">
+</div>
+</div>
+<div class="form-group row">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Enter call Phoner Number:</label>
+  <div class="col-sm-8">
+  <input type="text" name="issue.call.phoneNumber" class="form-control form-control-sm" [(ngModel)]="issue.call.phoneNumber">
+</div>
+</div>
+  <h3>Customer Details</h3>
+  <div class="form-group row">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Enter Customer Id:</label>
+  <div class="col-sm-8">
+  <input type="text" name="issue.call.customer.customerId" class="form-control form-control-sm" [(ngModel)]="issue.call.customer.customerId">
+</div>
+</div>
+<div class="form-group row">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm"> Enter Customer email:</label>
+  <div class="col-sm-8">
+ <input type="email" class="form-control form-control-sm" [(ngModel)]="issue.call.customer.email" name="issue.call.customer.email">
+</div>
+</div>
+<div class="form-group row">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Enter Customer mobile:</label>
+  <div class="col-sm-8">
+  <input type="text" class="form-control form-control-sm" [(ngModel)]="issue.call.customer.mobile" name="issue.call.customer.mobile">
+</div>
+</div>
+ 
+  <!--Enter UserName:<input type="text" [(ngModel)]="issue.call.customer.login.username" name="issue.call.customer.login.username"><br>-->
+  <h3>Operator Details</h3>
+  <div class="form-group row">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Enter Operator Id:</label>
+  <div class="col-sm-8">
+  <input type="text" name="issue.call.operator.operatorId" class="form-control form-control-sm" [(ngModel)]="issue.call.operator.operatorId">
+</div>
+</div>
+<div class="form-group row">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Enter Operator Email:</label>
+  <div class="col-sm-8">
+  <input type="text" name="issue.call.operator.email" class="form-control form-control-sm" [(ngModel)]="issue.call.operator.email">
+</div>
+</div>
+<div class="form-group row">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Enter Operator Mobile:</label>
+  <div class="col-sm-8">
+  <input type="text" name="issue.call.operator.mobile" class="form-control form-control-sm" [(ngModel)]="issue.call.operator.mobile">
+</div>
+</div>
+  
+  <h3>Solution Details</h3>
+  <div class="form-group row">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Enter Solution Id:</label>
+  <div class="col-sm-8">
+  <input type="text" name="issue.solution.solutionId" class="form-control" class="form-control form-control-sm" [(ngModel)]="issue.solution.solutionId">
+</div>
+</div>
+<div class="form-group row">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Enter Solution Description:</label>
+  <div class="col-sm-8">
+  <input type="text" name="issue.solution.solutionDescription" class="form-control form-control-sm" [(ngModel)]="issue.solution.solutionDescription">
+</div>
+</div>
+<div class="form-group row">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Enter Solution Date:</label>
+  <div class="col-sm-8">
+  <input type="date" name="issue.solution.solutionDate" class="form-control form-control-sm" [ngModel]="issue.solution.solutionDate | date |date:'dd/MM/yyyy' " (ngModelChange)="issue.solution.solutionDate=$event">
+</div>
+</div>
+<div class="form-group row">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm"> Enter Operator Id:</label>
+  <div class="col-sm-8">
+ <input type="text" name="issue.solution.operator.operatorId" class="form-control form-control-sm" [(ngModel)]="issue.solution.operator.operatorId">
+</div>
+</div>
+<div class="form-group row">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm"> Enter Operator Email:</label>
+  <div class="col-sm-8">
+ <input type="text" name="issue.solution.operator.email" class="form-control form-control-sm" [(ngModel)]="issue.solution.operator.email">
+</div>
+</div>
+<div class="form-group row">
+  <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Enter Operator Mobile:</label>
+  <div class="col-sm-8">
+  <input type="text" name="issue.solution.operator.mobile" class="form-control form-control-sm" [(ngModel)]="issue.solution.operator.mobile">
+</div>
+</div>
+  
+  
+
+ <button type="button" class="btn btn-dark" (click)="addCustomerIssue()">Add Customer Issue</button>
+

@@ -1,0 +1,24 @@
+<p>
+  All Customer Issue
+</p>
+<table class="table table-hover">
+<thead>
+  <th scope="col">NO.</th>
+  <th scope="col">ISSUE ID</th>
+  <th scope="col">ISSUE DESCRIPTION</th>
+  <th scope="col">ISSUE STATUS</th>
+  <th scope="col">ISSUE TYPE</th>
+</thead>
+<tbody>
+  <tr *ngFor="let issue of issuearray;let num=index">
+    <td>{{num+1}}</td>
+    <td>{{issue.issueId}}</td>
+    <td>{{issue.description}}</td>
+    <td>{{issue.issueStatus}}</td>
+    <td>{{issue.issueType}}</td>
+    <td><button type="button" class="btn btn-outline-secondary" (click)="editIssue(issue.call.operator.operatorId)">Edit Issue</button></td>
+    <td><button type="buttn"class="btn btn-success" (click)="closeIssue(issue.call.operator.operatorId)">Close Issue</button></td>
+  </tr>
+</tbody>
+</table>
+

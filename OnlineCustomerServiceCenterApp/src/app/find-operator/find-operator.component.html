@@ -1,0 +1,53 @@
+<p>
+  find-operator 
+</p>
+
+<head>
+  <style>
+    div{
+    margin:auto;
+  }
+  </style>
+</head>
+<div >
+<form class="row g-3" >
+  <div class="col-auto">
+    <input type="text" readonly class="form-control-plaintext" id="" value="Enter Department Id">
+  </div>
+  <div class="col-auto">
+    <input type="text" class="form-control" id="" placeholder="deptId" [(ngModel)]="departmentId" name="departmentId" >
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3" (click)="searchOpt()">Search</button>
+  </div>
+</form>
+</div>
+
+<div>
+  <table class="table">
+    <thead>
+      <tr class="table-secondary">
+        <th scope="col">operator Id</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">City</th>
+        <th scope="col">department Id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <td>{{operator.operatorId}}</td>
+        <td>{{operator.firstName}}</td>
+        <td>{{operator.lastName}}</td>
+        <td>{{operator.email}}</td>
+        <td>{{operator.mobile}}</td>
+        <td>{{operator.city}}</td>
+        <td>{{operator.department.departmentId}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
